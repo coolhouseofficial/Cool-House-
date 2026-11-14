@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="ur" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#102236">
+<title>COOL HOUSE | Business Management</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Noto+Nastaliq+Urdu:wght@400;500;600;700&display=swap');
+:root{--navy:#102236;--navy2:#18334a;--teal:#087f75;--teal2:#11a394;--ink:#1c2b39;--muted:#7b8996;--line:#e7edf1;--paper:#f3f6f8;--white:#fff;--red:#c94f58;--gold:#b98431;--shadow:0 8px 28px #152c3b0b}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:14px 'DM Sans','Noto Nastaliq Urdu',Arial,sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}.app{min-height:100vh;display:flex}.sidebar{width:248px;flex-shrink:0;background:linear-gradient(160deg,var(--navy),#17354b);color:white;padding:22px 15px;display:flex;flex-direction:column}.brand{display:flex;align-items:center;gap:11px;padding:3px 8px 23px;border-bottom:1px solid #ffffff20}.mark{height:42px;width:42px;border-radius:12px;background:linear-gradient(135deg,#19b7a7,#08766d);display:grid;place-items:center;font-size:22px;font-weight:800}.brand b{font-size:17px;letter-spacing:1.4px}.brand small{display:block;color:#a8bac7;font-size:9px;letter-spacing:1.6px;margin-top:3px}.navlabel{font-size:10px;color:#8ea4b3;letter-spacing:1.5px;padding:22px 10px 8px}.nav{display:grid;gap:4px;overflow:auto}.nav button{border:0;background:transparent;color:#c1ccd4;text-align:right;padding:10px 12px;border-radius:9px;display:flex;align-items:center;gap:11px;font-weight:600}.nav button:hover{background:#ffffff10;color:white}.nav button.active{background:linear-gradient(90deg,#087d74,#0b9b8d);color:white}.nav i{font-style:normal;width:20px;text-align:center;font-size:16px}.sidefoot{margin-top:auto;padding:15px 9px 0;border-top:1px solid #ffffff20;color:#9fb0bc;font-size:11px;line-height:1.9}.sidefoot b{color:#fff;display:block}.main{flex:1;min-width:0}.top{height:68px;background:white;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 30px;position:sticky;top:0;z-index:5}.crumb{color:var(--muted);font-size:12px}.crumb b{color:var(--ink);font-size:15px;margin-right:8px}.topright{display:flex;align-items:center;gap:10px}.sync{font-size:11px;font-weight:700;color:#087e72;background:#eef8f6;border:1px solid #d8eee9;padding:7px 11px;border-radius:20px}.avatar{width:35px;height:35px;border-radius:50%;background:#e6f3f1;color:#087f75;display:grid;place-items:center;font-weight:800}.content{max-width:1600px;margin:auto;padding:27px 30px 50px}.page{display:none}.page.active{display:block}.welcome{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;margin-bottom:20px}.eyebrow{font-size:10px;letter-spacing:1.6px;color:var(--teal);font-weight:800;margin-bottom:7px}.welcome h1{font-size:25px;margin:0;letter-spacing:-.5px}.welcome p{color:var(--muted);margin:6px 0 0;font-size:12px}.date{background:#fff;border:1px solid var(--line);border-radius:9px;padding:9px 12px;color:#667584;font-size:12px}.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:17px}.stat{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px;box-shadow:var(--shadow);min-width:0}.stathead{display:flex;align-items:center;justify-content:space-between;color:#778592;font-size:11px;font-weight:600}.ico{height:30px;width:30px;border-radius:9px;background:#eaf5f3;color:var(--teal);display:grid;place-items:center;font-size:15px}.stat strong{display:block;font-size:22px;margin-top:12px;overflow-wrap:anywhere}.stat small{display:block;color:#9aa5ae;font-size:10px;margin-top:4px}.grid2{display:grid;grid-template-columns:1.35fr 1fr;gap:14px;margin-bottom:14px}.panel{background:white;border:1px solid var(--line);border-radius:12px;padding:17px;box-shadow:var(--shadow);min-width:0;margin-bottom:14px}.panelhead{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:14px}.panel h3{font-size:13px;margin:0}.muted{color:var(--muted);font-size:11px}.toolbar{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin:17px 0 13px}.btn{border:0;border-radius:8px;padding:10px 14px;font-size:11px;font-weight:700;display:inline-flex;align-items:center;gap:7px}.primary{background:var(--teal);color:white}.primary:hover{background:#066d65}.light{background:white;border:1px solid var(--line);color:#596978}.danger{background:#fff0f0;color:#b7444c}.search{padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:white;min-width:210px;max-width:360px;flex:1;outline:none}.tablewrap{overflow:auto}table{width:100%;border-collapse:collapse;white-space:nowrap}th{text-align:right;color:#8b98a3;font-size:10px;font-weight:700;padding:10px;border-bottom:1px solid var(--line)}td{text-align:right;padding:11px 10px;border-bottom:1px solid #f0f3f5;font-size:11px}tbody tr:last-child td{border-bottom:0}.empty{text-align:center;color:#9aa5af;padding:26px}.pill{display:inline-block;border-radius:20px;padding:4px 8px;background:#eaf6f2;color:#16806f;font-size:10px;font-weight:700}.pill.warn{background:#fff5e8;color:#a66d20}.pill.red{background:#fff0f0;color:#b7444c}.formgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.field label{display:block;font-size:11px;color:#647382;font-weight:700;margin-bottom:6px}.field input,.field select,.field textarea{width:100%;padding:10px 11px;border:1px solid #dfe6eb;border-radius:8px;background:#fff;outline:none;color:#243443}.field textarea{min-height:75px;resize:vertical}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--teal);box-shadow:0 0 0 3px #087f7512}.modalbg{display:none;position:fixed;inset:0;background:#10223688;z-index:20;align-items:center;justify-content:center;padding:16px}.modalbg.show{display:flex}.modal{background:white;border-radius:14px;width:min(650px,100%);max-height:90vh;overflow:auto;padding:22px;box-shadow:0 25px 70px #0003}.modal h2{margin:0 0 5px;font-size:18px}.modal .muted{margin-bottom:17px}.modalactions{display:flex;justify-content:flex-start;gap:8px;margin-top:17px}.inline{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.right{text-align:left}.profit{color:#087f75}.loss{color:#c34e55}.notice{background:#f1f7f8;border:1px solid #dce9ec;padding:12px;border-radius:9px;color:#526675;font-size:11px;line-height:1.8}.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}.tab{border:1px solid var(--line);background:#fff;border-radius:8px;padding:8px 12px;color:#657583;font-size:11px}.tab.active{background:#eaf6f4;border-color:#bfe2dc;color:#087e73}.hidden{display:none!important}.invoice{max-width:820px;margin:12px auto;background:white;border:1px solid var(--line);padding:28px;border-radius:10px}.invhead{display:flex;justify-content:space-between;border-bottom:2px solid var(--navy);padding-bottom:15px;margin-bottom:16px}.invhead h2{margin:0;letter-spacing:2px}.totals{width:min(330px,100%);margin:18px 0 0 auto}.totals div{display:flex;justify-content:space-between;padding:6px;border-bottom:1px solid #edf0f2}.footer{text-align:center;color:#8d9aa5;font-size:10px;margin-top:25px}.developer{font-size:12px;line-height:2}.developer b{font-size:17px;color:var(--navy)}.settingscols{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:1100px){.stats{grid-template-columns:repeat(3,1fr)}.sidebar{width:220px}.content{padding:22px}}
+@media(max-width:760px){.app{display:block}.sidebar{width:100%;padding:11px 12px;display:block}.brand{padding:0 4px 9px;border:0}.mark{height:34px;width:34px}.brand b{font-size:14px}.navlabel,.sidefoot{display:none}.nav{display:flex;overflow:auto;padding-top:7px;gap:5px}.nav button{white-space:nowrap;padding:8px 10px;font-size:10px}.top{height:54px;padding:0 13px}.content{padding:18px 12px 35px}.welcome h1{font-size:21px}.date{display:none}.stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.stat{padding:12px}.stat strong{font-size:18px}.grid2,.settingscols{grid-template-columns:1fr}.formgrid{grid-template-columns:1fr}.panel{padding:13px}.sync{display:none}.search{min-width:100%}}
+@media print{.sidebar,.top,.no-print,.toolbar{display:none!important}.content{padding:0}.page{display:none!important}#invoices.page{display:block!important}.invoice{border:0;max-width:none}}
+
+/* Premium COOL HOUSE sign-in screen */
+#loginGate{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;padding:22px;background:radial-gradient(ellipse at 18% 15%,#1b5360 0,transparent 36%),radial-gradient(ellipse at 85% 85%,#0b766d 0,transparent 32%),linear-gradient(135deg,#081827,#102d42 58%,#0b3b43);font-family:'DM Sans','Noto Nastaliq Urdu',Arial,sans-serif;overflow:auto}
+#loginGate:before,#loginGate:after{content:'';position:absolute;border:1px solid #ffffff13;border-radius:50%;width:440px;height:440px;animation:loginOrbit 18s linear infinite;pointer-events:none}
+#loginGate:after{width:620px;height:620px;animation-direction:reverse;animation-duration:26s}
+.login-card{position:relative;z-index:1;width:min(440px,100%);padding:38px 34px 30px;border:1px solid #ffffff24;border-radius:25px;background:linear-gradient(145deg,#ffffff19,#ffffff0b);box-shadow:0 30px 90px #0006;backdrop-filter:blur(18px);animation:loginRise .8s cubic-bezier(.2,.8,.2,1) both;color:white}
+.login-brandmark{height:66px;width:66px;border-radius:20px;margin:0 auto 18px;display:grid;place-items:center;font-size:31px;font-weight:800;color:#fff;background:linear-gradient(135deg,#21c5b1,#08776f);box-shadow:0 12px 35px #11a39455;animation:loginFloat 4s ease-in-out infinite}
+.login-title{text-align:center;font-size:25px;letter-spacing:1.7px;font-weight:800;margin:0}.login-subtitle{text-align:center;color:#b8d0d5;font-size:12px;letter-spacing:2.4px;margin:8px 0 29px;text-transform:uppercase}
+.login-field{margin:0 0 17px}.login-field label{display:block;color:#d5e6e8;font-size:12px;font-weight:700;margin:0 0 8px;text-align:right;direction:rtl}.login-field input{display:block;visibility:visible;opacity:1;width:100%;height:51px;border:1px solid #ffffff2b;border-radius:12px;background:#061b2b88;color:#fff;padding:0 15px;outline:none;direction:ltr;text-align:right;transition:.25s}.login-field input::placeholder{color:#8ca5b1;text-align:right}.login-field input:focus{border-color:#35cbbb;box-shadow:0 0 0 4px #19b7a71c}.login-password-wrap{position:relative}.login-password-wrap input{padding-right:48px}.login-eye{position:absolute;right:10px;top:8px;height:35px;width:35px;border:0;border-radius:8px;background:#ffffff12;color:#d6e7e9;font-size:16px}
+#loginSubmit{width:100%;height:51px;border:0;border-radius:12px;color:#062b31;font-weight:800;font-size:14px;letter-spacing:.4px;background:linear-gradient(100deg,#32d4c1,#a4f1dc,#32d4c1);background-size:200% 100%;box-shadow:0 12px 28px #16b8a344;transition:transform .2s,box-shadow .2s;animation:loginShine 4s linear infinite}#loginSubmit:active{transform:scale(.985)}#loginSubmit:disabled{opacity:.7;cursor:wait}
+#loginError{min-height:20px;margin:13px 0 0;color:#ffc2bd;font-size:12px;line-height:1.7;text-align:center}#loginFoot{text-align:center;color:#8daeb7;font-size:10px;margin:20px 0 0;letter-spacing:1.1px}
+@keyframes loginRise{from{opacity:0;transform:translateY(24px) scale(.98)}to{opacity:1;transform:none}}@keyframes loginFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}@keyframes loginShine{to{background-position:200% 0}}@keyframes loginOrbit{to{transform:rotate(360deg)}}
+@media(max-width:480px){.login-card{padding:31px 23px 25px;border-radius:21px}.login-title{font-size:22px}#loginGate:before{width:300px;height:300px}#loginGate:after{width:430px;height:430px}}
+@media(prefers-reduced-motion:reduce){#loginGate:before,#loginGate:after,.login-card,.login-brandmark,#loginSubmit{animation:none}}
+
+
+.lang-toggle{border:1px solid #d7e1e7;background:#fff;color:#163449;border-radius:9px;padding:8px 12px;font-weight:800;font-size:11px;cursor:pointer;box-shadow:0 4px 14px #061b2b12}
+.login-lang{position:absolute;top:16px;right:16px;z-index:2}
+.brand .mark,.login-brandmark{background:linear-gradient(145deg,#173b59,#0d2438);border:1px solid #65a9cf;color:#fff;box-shadow:0 8px 24px #061b2b44;letter-spacing:-2px}
+.brand .mark{border-radius:50%;font-family:Georgia,serif;font-style:italic;font-size:22px}
+.login-brandmark{border-radius:50%;font-family:Georgia,serif;font-style:italic;font-size:31px;position:relative}
+.login-brandmark:after{content:'COOL HOUSE';position:absolute;white-space:nowrap;top:72px;font:700 9px 'DM Sans',Arial,sans-serif;letter-spacing:2px;color:#b8d0d5}
+#loginGate .login-card{padding-top:43px}
+body[data-lang="en"]{direction:ltr}
+body[data-lang="en"] .nav button,body[data-lang="en"] th,body[data-lang="en"] td{text-align:left}
+body[data-lang="en"] .login-field label{text-align:right;direction:rtl}
+body[data-lang="en"] .login-field input,body[data-lang="en"] .login-field input::placeholder{text-align:right;direction:ltr}
+body[data-lang="en"] .right{text-align:right}
+</style>
+</head>
+<body>
+
+<div id="loginGate">
+ <form class="login-card" id="coolHouseLoginForm">
+  <button class="lang-toggle login-lang" type="button" data-language-toggle>English</button>
+  <div class="login-brandmark">CH</div>
+  <h1 class="login-title">COOL HOUSE</h1>
+  <div class="login-subtitle">Management System · English / اردو</div>
+  <div class="login-field"><label for="loginEmail">Email Address</label><input id="loginEmail" type="email" autocomplete="username" placeholder="Enter your email" required></div>
+  <div class="login-field"><label for="loginPassword">Password</label><div class="login-password-wrap"><input id="loginPassword" type="password" autocomplete="current-password" placeholder="Enter your password" required><button class="login-eye" type="button" id="toggleLoginPassword" aria-label="Show password">◉</button></div></div>
+  <button id="loginSubmit" type="submit">LOGIN</button>
+  <div id="loginError" role="status" aria-live="polite"></div>
+  <div id="loginFoot">SECURE BUSINESS MANAGEMENT</div>
+ </form>
+</div>
+
+<div class="app" id="erpApplication" style="display:none">
+<aside class="sidebar">
+ <div class="brand"><div class="mark">CH</div><div><b>COOL HOUSE</b><small>BUSINESS MANAGEMENT</small></div></div>
+ <div class="navlabel">کاروباری نظام</div>
+ <nav class="nav" id="nav">
+  <button class="active" data-page="dashboard"><i>▦</i>ڈیش بورڈ</button>
+  <button data-page="products"><i>▤</i>پروڈکٹس / اسٹاک</button>
+  <button data-page="categories"><i>▦</i>کیٹیگریز</button>
+  <button data-page="purchases"><i>⇩</i>خریداری / سپلائر آرڈر</button>
+  <button data-page="sales"><i>↗</i>سیلز / کسٹمر آرڈر</button>
+  <button data-page="invoices"><i>▧</i>انوائسز</button>
+  <button data-page="parties"><i>♙</i>کسٹمرز / سپلائرز</button>
+  <button data-page="accounts"><i>◎</i>کھاتہ / لین دین</button>
+  <button data-page="expenses"><i>−</i>اخراجات</button>
+  <button data-page="salaries"><i>▣</i>تنخواہیں</button>
+  <button data-page="bank"><i>▤</i>کیش / بینک</button>
+  <button data-page="reports"><i>▥</i>رپورٹس</button>
+  <button data-page="settings"><i>⚙</i>سیٹنگز / بیک اپ</button>
+ </nav>
+ <div class="sidefoot"><b>COOL HOUSE BUSINESS SUITE</b>مکمل کاروباری حساب، اسٹاک اور مالی ریکارڈ<br>Developer: Samer</div>
+</aside>
+<main class="main">
+<header class="top"><div class="crumb">COOL HOUSE <b id="crumb">ڈیش بورڈ</b></div><div class="topright"><button class="lang-toggle" type="button" data-language-toggle>English</button><span class="sync" id="syncStatus">LOCAL محفوظ</span><div class="avatar">CH</div></div></header>
+<div class="content">
+<section class="page active" id="dashboard">
+ <div class="welcome"><div><div class="eyebrow">BUSINESS OVERVIEW</div><h1>السلام علیکم، COOL HOUSE</h1><p>آج کے کاروبار، اسٹاک، وصولیوں اور ادائیگیوں کی مکمل صورتحال</p></div><div class="date" id="today"></div></div>
+ <div class="stats">
+  <div class="stat"><div class="stathead">آج کی سیل <span class="ico">↗</span></div><strong id="dSales">Rs 0</strong><small>آج کے تمام سیلز آرڈرز</small></div>
+  <div class="stat"><div class="stathead">آج وصول شدہ رقم <span class="ico">✓</span></div><strong id="dReceived">Rs 0</strong><small>کیش اور بینک وصولیاں</small></div>
+  <div class="stat"><div class="stathead">آج کے اخراجات <span class="ico">−</span></div><strong id="dExpenses">Rs 0</strong><small>روزانہ، گھر اور دکان کے اخراجات</small></div>
+  <div class="stat"><div class="stathead">موجودہ اسٹاک کی لاگت <span class="ico">▤</span></div><strong id="dStockValue">Rs 0</strong><small>خریداری لاگت کے مطابق</small></div>
+  <div class="stat"><div class="stathead">اسٹاک میں موجود یونٹس <span class="ico">▣</span></div><strong id="dStockQty">0</strong><small>تمام پروڈکٹس کا مجموعی اسٹاک</small></div>
+  <div class="stat"><div class="stathead">کم اسٹاک / ختم <span class="ico">!</span></div><strong id="dLow">0</strong><small>دوبارہ خریداری کی ضرورت</small></div>
+  <div class="stat"><div class="stathead">کل سیلز <span class="ico">▧</span></div><strong id="dAllSales">Rs 0</strong><small>تمام محفوظ انوائسز</small></div>
+  <div class="stat"><div class="stathead">کسٹمرز سے وصولی <span class="ico">↙</span></div><strong id="dReceivable">Rs 0</strong><small>کسٹمرز کے بقایا جات</small></div>
+  <div class="stat"><div class="stathead">سپلائرز کو ادائیگی <span class="ico">↗</span></div><strong id="dPayable">Rs 0</strong><small>سپلائرز کے بقایا جات</small></div>
+  <div class="stat"><div class="stathead">کیش + بینک بیلنس <span class="ico">₨</span></div><strong id="dCash">Rs 0</strong><small>درج شدہ اوپننگ اور ٹرانزیکشنز</small></div>
+  <div class="stat"><div class="stathead">مجموعی منافع <span class="ico">↑</span></div><strong id="dProfit">Rs 0</strong><small>سیلز − فروخت شدہ مال کی لاگت</small></div>
+  <div class="stat"><div class="stathead">خالص منافع <span class="ico">◆</span></div><strong id="dNet">Rs 0</strong><small>مجموعی منافع − اخراجات − تنخواہیں</small></div>
+ </div>
+ <div class="grid2">
+  <div class="panel"><div class="panelhead"><div><h3>تازہ ترین سیلز</h3><div class="muted">حالیہ انوائسز اور وصولی</div></div><button class="btn light" onclick="go('invoices')">تمام انوائسز</button></div><div class="tablewrap"><table><thead><tr><th>انوائس</th><th>کسٹمر</th><th>کل رقم</th><th>بقایا</th></tr></thead><tbody id="dashInvoices"></tbody></table></div></div>
+  <div class="panel"><div class="panelhead"><div><h3>فوری کام</h3><div class="muted">عام کام ایک کلک میں</div></div></div><div class="inline"><button class="btn primary" onclick="go('sales')">＋ نئی سیل</button><button class="btn light" onclick="go('purchases')">＋ خریداری</button><button class="btn light" onclick="go('expenses')">＋ خرچہ درج کریں</button><button class="btn light" onclick="go('products')">＋ پروڈکٹ</button><button class="btn light" onclick="go('accounts')">＋ کھاتہ انٹری</button></div><div class="notice" style="margin-top:14px">ڈیش بورڈ کی تمام رقم آپ کے درج کردہ ریکارڈ سے خودکار حساب ہوتی ہے۔ خالی نئے سسٹم میں ابتدائی بیلنس صفر دکھایا جائے گا۔</div></div>
+ </div>
+ <div class="panel"><div class="panelhead"><h3>اسٹاک کی صورتحال</h3><button class="btn light" onclick="go('products')">اسٹاک دیکھیں</button></div><div class="tablewrap"><table><thead><tr><th>پروڈکٹ</th><th>کیٹیگری</th><th>موجودہ مقدار</th><th>کم از کم حد</th><th>حالت</th></tr></thead><tbody id="dashStock"></tbody></table></div></div>
+</section>
+
+<section class="page" id="categories">
+ <div class="welcome"><div><div class="eyebrow">SETUP</div><h1>کیٹیگریز</h1><p>یہاں اپنی ضرورت کے مطابق کیٹیگریز خود بنائیں۔ پہلے سے کوئی کیٹیگری شامل نہیں۔</p></div><button class="btn primary" onclick="openModal('categoryModal')">＋ نئی کیٹیگری</button></div>
+ <div class="panel"><div class="panelhead"><h3>آپ کی بنائی ہوئی کیٹیگریز</h3><span class="muted" id="categoryCount">0</span></div><div class="tablewrap"><table><thead><tr><th>کیٹیگری کا نام</th><th>تفصیل</th><th>پروڈکٹس</th><th>عمل</th></tr></thead><tbody id="categoryRows"></tbody></table></div></div>
+</section>
+
+<section class="page" id="products">
+ <div class="welcome"><div><div class="eyebrow">INVENTORY MANAGEMENT</div><h1>پروڈکٹس اور اسٹاک</h1><p>نیا آئٹم، خریداری لاگت، فروخت قیمت اور دستیاب مقدار</p></div><button class="btn primary" onclick="openModal('productModal')">＋ نئی پروڈکٹ</button></div>
+ <div class="toolbar"><input class="search" id="productSearch" placeholder="نام، SKU یا کیٹیگری تلاش کریں" oninput="renderProducts()"><span class="muted" id="productCount">0 پروڈکٹس</span></div>
+ <div class="panel"><div class="tablewrap"><table><thead><tr><th>پروڈکٹ</th><th>SKU</th><th>کیٹیگری</th><th>خرید لاگت</th><th>فروخت قیمت</th><th>موجودہ اسٹاک</th><th>اسٹاک ویلیو</th><th>عمل</th></tr></thead><tbody id="productRows"></tbody></table></div></div>
+</section>
+
+<section class="page" id="purchases">
+ <div class="welcome"><div><div class="eyebrow">PURCHASES & SUPPLIER ORDERS</div><h1>خریداری / سپلائر آرڈرز</h1><p>مال خریدیں، سپلائر کا بقایا خودکار اپڈیٹ ہوگا اور اسٹاک بڑھے گا</p></div></div>
+ <div class="panel">
+  <h3>نئی خریداری درج کریں</h3><div class="formgrid" style="margin-top:14px">
+   <div class="field"><label>سپلائر</label><select id="purchaseSupplier"></select></div>
+   <div class="field"><label>خریداری کی تاریخ</label><input type="date" id="purchaseDate"></div>
+   <div class="field"><label>پروڈکٹ</label><select id="purchaseProduct"></select></div>
+   <div class="field"><label>مقدار</label><input type="number" id="purchaseQty" min="1" value="1"></div>
+   <div class="field"><label>فی یونٹ خرید قیمت</label><input type="number" id="purchaseCost" min="0" step=".01"></div>
+   <div class="field"><label>ابھی ادا کی گئی رقم</label><input type="number" id="purchasePaid" min="0" step=".01" value="0"></div>
+   <div class="field"><label>ادائیگی کا اکاؤنٹ</label><select id="purchaseAccount" class="accountSelect"></select></div>
+   <div class="field"><label>حوالہ / نوٹ</label><input id="purchaseNote" placeholder="اختیاری"></div>
+  </div><div class="inline" style="justify-content:flex-start;margin-top:14px"><button class="btn primary" onclick="savePurchase()">خریداری محفوظ کریں</button><span class="muted">کل رقم اور بقایا خودکار شمار ہوگا</span></div>
+ </div>
+ <div class="panel"><div class="panelhead"><h3>خریداری کا ریکارڈ</h3></div><div class="tablewrap"><table><thead><tr><th>تاریخ</th><th>سپلائر</th><th>پروڈکٹ</th><th>مقدار</th><th>کل رقم</th><th>ادا شدہ</th><th>بقایا</th></tr></thead><tbody id="purchaseRows"></tbody></table></div></div>
+</section>
+
+<section class="page" id="sales">
+ <div class="welcome"><div><div class="eyebrow">SALES & CUSTOMER ORDERS</div><h1>سیلز / کسٹمر آرڈر</h1><p>آرڈر بنائیں، اسٹاک کم ہوگا، کسٹمر کا بقایا اور انوائس تیار ہوگی</p></div></div>
+ <div class="panel">
+  <h3>نیا سیلز آرڈر</h3><div class="formgrid" style="margin-top:14px">
+   <div class="field"><label>کسٹمر</label><select id="saleCustomer"></select></div>
+   <div class="field"><label>تاریخ</label><input type="date" id="saleDate"></div>
+   <div class="field"><label>پروڈکٹ</label><select id="saleProduct"></select></div>
+   <div class="field"><label>مقدار</label><input type="number" id="saleQty" min="1" value="1"></div>
+   <div class="field"><label>فی یونٹ فروخت قیمت</label><input type="number" id="salePrice" min="0" step=".01"></div>
+   <div class="field"><label>ڈسکاؤنٹ</label><input type="number" id="saleDiscount" min="0" step=".01" value="0"></div>
+   <div class="field"><label>وصول شدہ رقم</label><input type="number" id="salePaid" min="0" step=".01" value="0"></div>
+   <div class="field"><label>رقم وصول کرنے کا اکاؤنٹ</label><select id="saleAccount" class="accountSelect"></select></div>
+   <div class="field"><label>آرڈر کی حالت</label><select id="saleStatus"><option value="Completed">مکمل</option><option value="Pending">زیرِ التوا</option></select></div>
+   <div class="field"><label>نوٹ</label><input id="saleNote" placeholder="اختیاری"></div>
+  </div><div class="inline" style="justify-content:flex-start;margin-top:14px"><button class="btn primary" onclick="saveSale()">سیل محفوظ کریں اور انوائس بنائیں</button><span class="muted" id="saleCalc">کل: Rs 0</span></div>
+ </div>
+ <div class="panel"><div class="panelhead"><h3>کسٹمر آرڈرز</h3></div><div class="tablewrap"><table><thead><tr><th>آرڈر / انوائس</th><th>تاریخ</th><th>کسٹمر</th><th>حالت</th><th>کل</th><th>وصول</th><th>بقایا</th><th>عمل</th></tr></thead><tbody id="saleRows"></tbody></table></div></div>
+</section>
+
+<section class="page" id="invoices">
+ <div class="welcome"><div><div class="eyebrow">INVOICE CENTER</div><h1>انوائسز</h1><p>انوائس دیکھیں، پرنٹ کریں اور کسٹمر کی بقایا رقم چیک کریں</p></div></div>
+ <div class="panel"><div class="panelhead"><h3>تمام انوائسز</h3></div><div class="tablewrap"><table><thead><tr><th>انوائس نمبر</th><th>تاریخ</th><th>کسٹمر</th><th>کل</th><th>ادا شدہ</th><th>بقایا</th><th></th></tr></thead><tbody id="invoiceRows"></tbody></table></div></div>
+ <div id="invoicePreview"></div>
+</section>
+
+<section class="page" id="parties">
+ <div class="welcome"><div><div class="eyebrow">CUSTOMER & SUPPLIER DIRECTORY</div><h1>کسٹمرز اور سپلائرز</h1><p>ہر پارٹی کا الگ کھاتہ اور بقایا ریکارڈ</p></div><button class="btn primary" onclick="openModal('partyModal')">＋ نئی پارٹی</button></div>
+ <div class="tabs"><button class="tab active" data-filter="All" onclick="partyFilter('All',this)">تمام</button><button class="tab" data-filter="Customer" onclick="partyFilter('Customer',this)">کسٹمرز</button><button class="tab" data-filter="Supplier" onclick="partyFilter('Supplier',this)">سپلائرز</button></div>
+ <div class="panel"><div class="tablewrap"><table><thead><tr><th>نام</th><th>قسم</th><th>فون</th><th>بقایا</th><th>عمل</th></tr></thead><tbody id="partyRows"></tbody></table></div></div>
+</section>
+
+<section class="page" id="accounts">
+ <div class="welcome"><div><div class="eyebrow">LEDGER & TRANSACTIONS</div><h1>کھاتہ / لین دین کا ریکارڈ</h1><p>کسٹمر وصولی، سپلائر ادائیگی اور دیگر مالی انٹریز</p></div></div>
+ <div class="panel"><h3>نئی کھاتہ انٹری</h3><div class="formgrid" style="margin-top:14px">
+  <div class="field"><label>پارٹی</label><select id="ledgerParty"></select></div><div class="field"><label>انٹری کی قسم</label><select id="ledgerType"><option value="receive">کسٹمر سے وصولی</option><option value="pay">سپلائر کو ادائیگی</option><option value="customerCredit">کسٹمر پر بقایا / ادھار</option><option value="supplierCredit">سپلائر کا بقایا</option></select></div>
+  <div class="field"><label>رقم</label><input id="ledgerAmount" type="number" min="1"></div><div class="field"><label>کیش / بینک اکاؤنٹ</label><select id="ledgerAccount" class="accountSelect"></select></div>
+  <div class="field"><label>تاریخ</label><input id="ledgerDate" type="date"></div><div class="field"><label>تفصیل</label><input id="ledgerNote"></div>
+ </div><div class="inline" style="margin-top:14px"><button class="btn primary" onclick="saveLedger()">انٹری محفوظ کریں</button></div></div>
+ <div class="panel"><div class="panelhead"><h3>تمام مالی لین دین</h3><input class="search" id="ledgerSearch" placeholder="نام یا تفصیل تلاش کریں" oninput="renderLedger()"></div><div class="tablewrap"><table><thead><tr><th>تاریخ</th><th>پارٹی</th><th>تفصیل</th><th>رقم</th><th>قسم</th></tr></thead><tbody id="ledgerRows"></tbody></table></div></div>
+</section>
+
+<section class="page" id="expenses">
+ <div class="welcome"><div><div class="eyebrow">EXPENSE MANAGEMENT</div><h1>اخراجات</h1><p>روزانہ چائے، کھانا، پیٹرول، گھر کا خرچ، دکان کا کرایہ، بل اور دیگر اخراجات الگ ریکارڈ کریں</p></div></div>
+ <div class="panel"><h3>نیا خرچہ درج کریں</h3><div class="formgrid" style="margin-top:14px">
+  <div class="field"><label>خرچے کی قسم</label><select id="expenseCategory"><option>چائے / پانی</option><option>کھانا</option><option>پیٹرول / ٹرانسپورٹ</option><option>گھر کا خرچ</option><option>دکان کا کرایہ</option><option>بجلی / گیس / پانی کے بل</option><option>انٹرنیٹ / فون</option><option>مرمت / مینٹیننس</option><option>دفتری سامان</option><option>دیگر</option></select></div>
+  <div class="field"><label>خرچے کی تاریخ</label><input type="date" id="expenseDate"></div><div class="field"><label>رقم</label><input type="number" id="expenseAmount" min="1" step=".01"></div><div class="field"><label>ادائیگی اکاؤنٹ</label><select id="expenseAccount" class="accountSelect"></select></div><div class="field"><label>تفصیل / کس مقصد کے لیے</label><input id="expenseNote" placeholder="اختیاری تفصیل"></div>
+ </div><div class="inline" style="margin-top:14px"><button class="btn primary" onclick="saveExpense()">خرچہ محفوظ کریں</button></div></div>
+ <div class="panel"><div class="panelhead"><h3>اخراجات کا ریکارڈ</h3><span class="muted" id="expenseTotal">کل: Rs 0</span></div><div class="tablewrap"><table><thead><tr><th>تاریخ</th><th>قسم</th><th>تفصیل</th><th>اکاؤنٹ</th><th>رقم</th></tr></thead><tbody id="expenseRows"></tbody></table></div></div>
+</section>
+
+<section class="page" id="salaries">
+ <div class="welcome"><div><div class="eyebrow">PAYROLL</div><h1>ملازمین کی تنخواہیں</h1><p>ملازم، ماہانہ تنخواہ، ادا شدہ رقم اور بقایا</p></div></div>
+ <div class="panel"><h3>تنخواہ ادا کریں / ریکارڈ بنائیں</h3><div class="formgrid" style="margin-top:14px">
+  <div class="field"><label>ملازم کا نام</label><input id="salaryEmployee" placeholder="نام درج کریں"></div><div class="field"><label>مہینہ</label><input id="salaryMonth" type="month"></div><div class="field"><label>کل تنخواہ</label><input id="salaryTotal" type="number" min="1"></div><div class="field"><label>ابھی ادا کی گئی رقم</label><input id="salaryPaid" type="number" min="0" value="0"></div><div class="field"><label>ادائیگی اکاؤنٹ</label><select id="salaryAccount" class="accountSelect"></select></div><div class="field"><label>نوٹ</label><input id="salaryNote"></div>
+ </div><div class="inline" style="margin-top:14px"><button class="btn primary" onclick="saveSalary()">تنخواہ محفوظ کریں</button></div></div>
+ <div class="panel"><div class="panelhead"><h3>تنخواہوں کا ریکارڈ</h3></div><div class="tablewrap"><table><thead><tr><th>ملازم</th><th>مہینہ</th><th>کل تنخواہ</th><th>ادا</th><th>بقایا</th></tr></thead><tbody id="salaryRows"></tbody></table></div></div>
+</section>
+
+<section class="page" id="bank">
+ <div class="welcome"><div><div class="eyebrow">CASH & BANK</div><h1>کیش اور بینک اکاؤنٹس</h1><p>کیش، بینک بیلنس اور ہر اکاؤنٹ کی آمدن و خرچ</p></div></div>
+ <div class="panel"><h3>اکاؤنٹ شامل کریں</h3><div class="formgrid" style="margin-top:14px"><div class="field"><label>اکاؤنٹ کا نام</label><input id="bankName" placeholder="مثلاً Cash in Hand / Bank"></div><div class="field"><label>ابتدائی بیلنس</label><input id="bankOpening" type="number" value="0"></div></div><div class="inline" style="margin-top:12px"><button class="btn primary" onclick="addBank()">اکاؤنٹ محفوظ کریں</button></div></div>
+ <div class="panel"><h3>اکاؤنٹ بیلنس</h3><div class="tablewrap"><table><thead><tr><th>اکاؤنٹ</th><th>ابتدائی بیلنس</th><th>موجودہ بیلنس</th><th></th></tr></thead><tbody id="bankRows"></tbody></table></div></div>
+ <div class="panel"><h3>اکاؤنٹس کے درمیان رقم منتقل کریں</h3><div class="formgrid" style="margin-top:14px"><div class="field"><label>کہاں سے</label><select id="transferFrom" class="accountSelect"></select></div><div class="field"><label>کہاں تک</label><select id="transferTo" class="accountSelect"></select></div><div class="field"><label>رقم</label><input id="transferAmount" type="number" min="1"></div><div class="field"><label>تاریخ</label><input id="transferDate" type="date"></div></div><div class="inline" style="margin-top:12px"><button class="btn primary" onclick="transferMoney()">رقم منتقل کریں</button></div></div>
+</section>
+
+<section class="page" id="reports">
+ <div class="welcome"><div><div class="eyebrow">BUSINESS INTELLIGENCE</div><h1>رپورٹس اور منافع</h1><p>سیلز، خریداری، اسٹاک، اخراجات، تنخواہیں اور مالی پوزیشن</p></div><button class="btn light" onclick="window.print()">رپورٹ پرنٹ کریں</button></div>
+ <div class="stats">
+  <div class="stat"><div class="stathead">کل سیلز</div><strong id="rSales">Rs 0</strong></div><div class="stat"><div class="stathead">فروخت شدہ مال کی لاگت</div><strong id="rCogs">Rs 0</strong></div><div class="stat"><div class="stathead">مجموعی منافع</div><strong id="rGross">Rs 0</strong></div><div class="stat"><div class="stathead">اخراجات + تنخواہیں</div><strong id="rCosts">Rs 0</strong></div>
+  <div class="stat"><div class="stathead">خالص منافع</div><strong id="rNet">Rs 0</strong></div><div class="stat"><div class="stathead">خریداری</div><strong id="rPurchases">Rs 0</strong></div><div class="stat"><div class="stathead">موجودہ اسٹاک</div><strong id="rStock">Rs 0</strong></div><div class="stat"><div class="stathead">موجودہ کیش / بینک</div><strong id="rCash">Rs 0</strong></div>
+ </div>
+ <div class="panel"><div class="panelhead"><h3>اخراجات کی قسم کے مطابق خلاصہ</h3></div><div class="tablewrap"><table><thead><tr><th>قسم</th><th>کل رقم</th></tr></thead><tbody id="expenseSummary"></tbody></table></div></div>
+ <div class="panel"><div class="panelhead"><h3>اسٹاک کی تفصیلی رپورٹ</h3></div><div class="tablewrap"><table><thead><tr><th>پروڈکٹ</th><th>موجودہ مقدار</th><th>خرید لاگت</th><th>اسٹاک کی مالیت</th><th>فروخت</th></tr></thead><tbody id="stockReport"></tbody></table></div></div>
+</section>
+
+<section class="page" id="settings">
+ <div class="welcome"><div><div class="eyebrow">SYSTEM CONTROL</div><h1>سیٹنگز، بیک اپ اور Firebase</h1><p>کمپنی کی معلومات، ڈیٹا بیک اپ اور کلاؤڈ سنک</p></div></div>
+ <div class="settingscols">
+  <div class="panel"><h3>کمپنی کی معلومات</h3><div class="formgrid" style="margin-top:14px">
+   <div class="field"><label>کمپنی کا نام</label><input id="companyName" value="COOL HOUSE"></div><div class="field"><label>فون نمبر</label><input id="companyPhone"></div><div class="field"><label>ای میل</label><input id="companyEmail"></div><div class="field"><label>دکان کا مکمل پتہ</label><input id="companyAddress"></div>
+  </div><button class="btn primary" style="margin-top:13px" onclick="saveCompany()">معلومات محفوظ کریں</button></div>
+  <div class="panel"><h3>ڈیٹا بیک اپ</h3><p class="muted">اپنا مکمل ریکارڈ JSON فائل میں محفوظ کریں یا پہلے سے موجود بیک اپ واپس لائیں۔</p><div class="inline"><button class="btn primary" onclick="backup()">بیک اپ ڈاؤن لوڈ</button><label class="btn light">بیک اپ بحال کریں<input type="file" accept=".json,application/json" hidden onchange="restoreBackup(event)"></label></div><p class="muted" id="backupInfo"></p></div>
+ </div>
+ <div class="panel"><h3>Firebase Cloud Sync</h3><p class="muted">یہاں اپنے Firebase Web App کی configuration محفوظ کرکے کلاؤڈ سنک فعال کریں۔ Firebase config آپ کے Firebase Console میں Project settings → Your apps → SDK setup and configuration میں ملتی ہے۔</p>
+  <div class="notice">آپ کا موجودہ Firebase پروجیکٹ پہلے سے درج ہے۔ Google Sign-in یا اپنے Admin Email/Password سے لاگ اِن کریں۔ Firestore میں ہر اکاؤنٹ کا ڈیٹا الگ محفوظ ہوگا۔</div>
+  <details style="margin-top:12px"><summary style="cursor:pointer;font-weight:700;color:#087f75">Firestore Security Rules (یہ کوڈ Firebase Console میں لگائیں)</summary><pre style="white-space:pre-wrap;background:#f4f7f8;padding:12px;border-radius:8px;font-size:11px;direction:ltr;text-align:left">rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /users/{userId}/coolHouseERP/{document=**} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+  }
+}</pre></details>
+  <div class="formgrid" style="margin-top:14px">
+   <div class="field"><label>API Key</label><input id="fbApiKey" placeholder="AIza..."></div><div class="field"><label>Auth Domain</label><input id="fbAuthDomain" placeholder="your-project.firebaseapp.com"></div>
+   <div class="field"><label>Project ID</label><input id="fbProjectId" placeholder="your-project-id"></div><div class="field"><label>App ID</label><input id="fbAppId" placeholder="1:...:web:..."></div>
+   <div class="field"><label>Storage Bucket (اختیاری)</label><input id="fbBucket"></div><div class="field"><label>Messaging Sender ID (اختیاری)</label><input id="fbSender"></div>
+  </div>
+  <div class="inline" style="margin-top:13px"><button class="btn primary" onclick="connectFirebase()">Google کے ذریعے Firebase لاگ اِن</button><button class="btn light" onclick="cloudSyncNow()">ابھی سنک کریں</button></div>
+  <p class="muted" id="firebaseMessage">Firebase ابھی کنیکٹ نہیں ہے۔ لوکل ڈیٹا اس ڈیوائس پر محفوظ رہتا ہے۔</p>
+ </div>
+ <div class="panel developer"><h3>سافٹ ویئر کی معلومات</h3><p><b>COOL HOUSE</b><br>Business Management & ERP System<br>Developer: <strong>Samer</strong><br>Version: 2.0 · Local database + Firebase Cloud Sync<br>تمام حساب درج شدہ کاروباری ڈیٹا کی بنیاد پر خودکار ہے۔</p></div>
+ <div class="panel"><h3>ڈیٹا مینجمنٹ</h3><p class="muted">یہ بٹن صرف اسی نئے COOL HOUSE ڈیٹا سیٹ کو خالی کرے گا۔ یہ عمل واپس نہیں ہوگا؛ پہلے بیک اپ ضرور ڈاؤن لوڈ کریں۔</p><button class="btn danger" onclick="clearAllData()">نئے سسٹم کا تمام ڈیٹا صاف کریں</button></div>
+</section>
+</div></main></div>
+
+<!-- Modals -->
+<div class="modalbg" id="categoryModal"><div class="modal"><h2>نئی کیٹیگری</h2><p class="muted">اپنی مرضی کا نام رکھیں؛ کوئی پہلے سے طے شدہ کیٹیگری نہیں۔</p><div class="formgrid"><div class="field"><label>کیٹیگری کا نام</label><input id="catName"></div><div class="field"><label>تفصیل</label><input id="catDesc"></div></div><div class="modalactions"><button class="btn primary" onclick="saveCategory()">محفوظ کریں</button><button class="btn light" onclick="closeModal('categoryModal')">منسوخ</button></div></div></div>
+<div class="modalbg" id="productModal"><div class="modal"><h2>نئی پروڈکٹ</h2><p class="muted">پروڈکٹ کیٹیگری آپ خود بنائیں؛ پروڈکٹ کا نام اور اسٹاک خود درج کریں۔</p><div class="formgrid">
+ <div class="field"><label>پروڈکٹ کا نام *</label><input id="pName"></div><div class="field"><label>SKU / کوڈ</label><input id="pSku"></div>
+ <div class="field"><label>کیٹیگری</label><select id="pCategory"></select></div><div class="field"><label>برانڈ / کمپنی</label><input id="pBrand"></div>
+ <div class="field"><label>فی یونٹ خرید لاگت</label><input id="pCost" type="number" min="0" step=".01" value="0"></div><div class="field"><label>فی یونٹ فروخت قیمت</label><input id="pPrice" type="number" min="0" step=".01" value="0"></div>
+ <div class="field"><label>ابتدائی اسٹاک</label><input id="pQty" type="number" min="0" value="0"></div><div class="field"><label>کم اسٹاک کی حد</label><input id="pMin" type="number" min="0" value="2"></div>
+ </div><div class="modalactions"><button class="btn primary" onclick="saveProduct()">پروڈکٹ محفوظ کریں</button><button class="btn light" onclick="closeModal('productModal')">منسوخ</button></div></div></div>
+<div class="modalbg" id="partyModal"><div class="modal"><h2>نئی پارٹی</h2><div class="formgrid"><div class="field"><label>قسم</label><select id="partyType"><option value="Customer">کسٹمر</option><option value="Supplier">سپلائر</option></select></div><div class="field"><label>نام *</label><input id="partyName"></div><div class="field"><label>فون</label><input id="partyPhone"></div><div class="field"><label>ابتدائی بقایا (مثبت رقم)</label><input id="partyOpening" type="number" min="0" value="0"></div></div><div class="modalactions"><button class="btn primary" onclick="saveParty()">محفوظ کریں</button><button class="btn light" onclick="closeModal('partyModal')">منسوخ</button></div></div></div>
+<script>
+(()=>{
+ const pairs={
+ 'کاروباری نظام':'Business Suite','ڈیش بورڈ':'Dashboard','پروڈکٹس / اسٹاک':'Products / Stock','کیٹیگریز':'Categories','خریداری / سپلائر آرڈر':'Purchases / Supplier Orders','سیلز / کسٹمر آرڈر':'Sales / Customer Orders','انوائسز':'Invoices','کسٹمرز / سپلائرز':'Customers / Suppliers','کھاتہ / لین دین':'Accounts / Transactions','اخراجات':'Expenses','تنخواہیں':'Salaries','کیش / بینک':'Cash / Bank','رپورٹس':'Reports','سیٹنگز / بیک اپ':'Settings / Backup','مکمل کاروباری حساب، اسٹاک اور مالی ریکارڈ':'Complete business accounts, inventory and financial records',
+ 'Email Address':'Email Address','Enter your email':'Enter your email','Password':'Password','Enter your password':'Enter your password','Management System':'Management System','SECURE BUSINESS MANAGEMENT':'SECURE BUSINESS MANAGEMENT','LOGIN':'LOGIN',
+ 'السلام علیکم، COOL HOUSE':'Welcome to COOL HOUSE','آج کے کاروبار، اسٹاک، وصولیوں اور ادائیگیوں کی مکمل صورتحال':'Today’s business, stock, receivables and payments overview','آج کی سیل':'Today’s Sales','آج وصول شدہ رقم':'Received Today','آج کے اخراجات':'Today’s Expenses','موجودہ اسٹاک کی لاگت':'Current Stock Value','اسٹاک میں موجود یونٹس':'Units in Stock','کم اسٹاک / ختم':'Low / Out of Stock','کل سیلز':'Total Sales','کسٹمرز سے وصولی':'Customer Receivables','سپلائرز کو ادائیگی':'Supplier Payables','کیش + بینک بیلنس':'Cash + Bank Balance','مجموعی منافع':'Gross Profit','خالص منافع':'Net Profit',
+ 'آج کے تمام سیلز آرڈرز':'All sales orders today','کیش اور بینک وصولیاں':'Cash and bank receipts','روزانہ، گھر اور دکان کے اخراجات':'Daily, household and shop expenses','خریداری لاگت کے مطابق':'Based on purchase cost','تمام پروڈکٹس کا مجموعی اسٹاک':'Total units across all products','دوبارہ خریداری کی ضرورت':'Reorder required','تمام محفوظ انوائسز':'All saved invoices','کسٹمرز کے بقایا جات':'Customer outstanding balances','سپلائرز کے بقایا جات':'Supplier outstanding balances','درج شدہ اوپننگ اور ٹرانزیکشنز':'Opening balances and recorded transactions','سیلز − فروخت شدہ مال کی لاگت':'Sales minus cost of goods sold','مجموعی منافع − اخراجات − تنخواہیں':'Gross profit minus expenses and salaries',
+ 'تازہ ترین سیلز':'Latest Sales','حالیہ انوائسز اور وصولی':'Recent invoices and receipts','تمام انوائسز':'All Invoices','فوری کام':'Quick Actions','عام کام ایک کلک میں':'Common tasks in one click','＋ نئی سیل':'+ New Sale','＋ خریداری':'+ Purchase','＋ خرچہ درج کریں':'+ Add Expense','＋ پروڈکٹ':'+ Product','＋ کھاتہ انٹری':'+ Account Entry','ڈیش بورڈ کی تمام رقم آپ کے درج کردہ ریکارڈ سے خودکار حساب ہوتی ہے۔ خالی نئے سسٹم میں ابتدائی بیلنس صفر دکھایا جائے گا۔':'Dashboard totals are calculated from your records. A new system starts with zero opening balances.','اسٹاک کی صورتحال':'Stock Overview','اسٹاک دیکھیں':'View Stock','پروڈکٹ':'Product','کیٹیگری':'Category','موجودہ مقدار':'Current Quantity','کم از کم حد':'Minimum Level','حالت':'Status',
+ 'نئی کیٹیگری':'New Category','کیٹیگری کا نام':'Category Name','تفصیل':'Description','محفوظ کریں':'Save','منسوخ':'Cancel','نام درج کریں':'Enter a name','پروڈکٹ کا نام ضروری ہے':'Product name is required','ابھی کوئی پروڈکٹ نہیں':'No products yet','پہلے کیٹیگری بنائیں، پھر پروڈکٹ شامل کریں۔':'Create a category first, then add a product.','حذف':'Delete','دیکھیں':'View','پرنٹ کریں':'Print','انوائس پرنٹ کریں / PDF':'Print Invoice / PDF','کسٹمر':'Customer','سپلائر':'Supplier','تاریخ':'Date','وقت':'Time','کل رقم':'Grand Total','بقایا':'Due','وصول شدہ':'Received','سب ٹوٹل':'Subtotal','ڈسکاؤنٹ':'Discount','مقدار':'Quantity','فی یونٹ':'Unit Price','نام':'Name','فون':'Phone','ابتدائی بقایا (مثبت رقم)':'Opening Balance (positive amount)','پارٹی منتخب کریں':'Select Party','رقم':'Amount','نوٹ':'Note','ادائیگی':'Payment','وصولی':'Receipt','تمام':'All','منافع':'Profit','نقصان':'Loss',
+ 'کمپنی کی معلومات':'Company Information','کمپنی کا نام':'Company Name','کمپنی کا فون':'Company Phone','کمپنی کا ای میل':'Company Email','پتہ':'Address','ڈیٹا مینجمنٹ':'Data Management','بیک اپ':'Backup','بیک اپ ڈاؤن لوڈ کریں':'Download Backup','بیک اپ بحال کریں':'Restore Backup','تمام نیا COOL HOUSE ڈیٹا صاف کریں':'Clear All COOL HOUSE Data','Firebase کنفیگریشن':'Firebase Configuration','Firebase ابھی کنیکٹ نہیں ہے۔ لوکل ڈیٹا اس ڈیوائس پر محفوظ رہتا ہے۔':'Firebase is not connected. Local data stays saved on this device.','ابھی سنک کریں':'Sync Now','لاگ آؤٹ':'Log Out','لوکل محفوظ':'LOCAL SAVED','لاگ اِن کامیاب؛ کلاؤڈ ڈیٹا چیک ہو رہا ہے…':'Login successful; checking cloud data…','Firebase سے رابطہ ہو رہا ہے…':'Connecting to Firebase…','براہِ کرم Email اور Password درج کریں۔':'Please enter Email and Password.','لاگ اِن ناکام':'Login failed','Email یا Password درست نہیں۔':'Email or Password is incorrect.','اس Email کا اکاؤنٹ Firebase میں موجود نہیں۔':'No Firebase account exists for this email.','Password درست نہیں۔':'Incorrect password.','انٹرنیٹ کنکشن چیک کریں۔':'Check your internet connection.','لاگ اِن کامیاب؛ ERP کھل رہا ہے…':'Login successful; opening ERP…'
+ };
+ const exact=new Map(Object.entries(pairs));
+ const nodes=new Map(); let lang=localStorage.getItem('ch_language')||'ur';
+ function convert(s){if(exact.has(s.trim()))return s.replace(s.trim(),exact.get(s.trim()));let out=s;for(const [ur,en] of Object.entries(pairs)){if(ur.length>2&&out.includes(ur))out=out.split(ur).join(en)}return out}
+ function walk(root){const w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);let n;while(n=w.nextNode()){if(!nodes.has(n))nodes.set(n,n.nodeValue);const original=nodes.get(n);n.nodeValue=lang==='en'?convert(original):original}}
+ function apply(){document.body.dataset.lang=lang;document.documentElement.lang=lang;document.documentElement.dir=lang==='ur'?'rtl':'ltr';walk(document.body);document.querySelectorAll('[placeholder]').forEach(el=>{if(!el.dataset.urPlaceholder)el.dataset.urPlaceholder=el.getAttribute('placeholder');el.setAttribute('placeholder',lang==='en'?convert(el.dataset.urPlaceholder):el.dataset.urPlaceholder)});document.querySelectorAll('[data-language-toggle]').forEach(b=>b.textContent=lang==='ur'?'English':'اردو');}
+ document.addEventListener('click',e=>{if(e.target.closest('[data-language-toggle]')){lang=lang==='ur'?'en':'ur';localStorage.setItem('ch_language',lang);apply()}});
+ const observer=new MutationObserver(records=>{for(const r of records){if(r.type==='childList')r.addedNodes.forEach(n=>{if(n.nodeType===Node.TEXT_NODE){if(!nodes.has(n))nodes.set(n,n.nodeValue);if(lang==='en')n.nodeValue=convert(nodes.get(n))}else if(n.nodeType===Node.ELEMENT_NODE)walk(n)});else if(r.type==='characterData'){if(!nodes.has(r.target))nodes.set(r.target,r.target.nodeValue);{const translated=lang==='en'?convert(nodes.get(r.target)):nodes.get(r.target);if(r.target.nodeValue!==translated)r.target.nodeValue=translated}}}});
+ observer.observe(document.body,{subtree:true,childList:true,characterData:true});document.addEventListener('DOMContentLoaded',apply);apply();
+})();
+</script>
+<script type="module">
+import {initializeApp,getApps} from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js';
+import {getAuth,signInWithPopup,GoogleAuthProvider,signInWithEmailAndPassword,onAuthStateChanged} from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js';
+import {getFirestore,initializeFirestore,persistentLocalCache,persistentMultipleTabManager,doc,getDoc,setDoc,onSnapshot,serverTimestamp} from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js';
+let db=null,auth=null,cloudUid=null,cloudReady=false,unsubscribe=null,syncTimer=null,localDirty=false,syncInFlight=false,syncAgain=false,localVersion=0,authObserverReady=false;
+const CLIENT_ID=(()=>{let v=localStorage.getItem('ch_client_id');if(!v){v='ch-'+Date.now().toString(36)+'-'+Math.random().toString(36).slice(2);localStorage.setItem('ch_client_id',v)}return v})();
+const KEY='cool_house_erp_v2';
+const blank=()=>({products:[],categories:[],parties:[],purchases:[],sales:[],expenses:[],salaries:[],ledger:[],accounts:[{id:'cash',name:'Cash in Hand',opening:0}],transfers:[],company:{name:'COOL HOUSE',phone:'',email:'',address:''},updatedAt:new Date().toISOString()});
+const PROJECT_FIREBASE_CONFIG={apiKey:'AIzaSyAQwjPTD_SyN2FEjhzNXw0cOSs67wbnGfk',authDomain:'cool-house-e3392.firebaseapp.com',projectId:'cool-house-e3392',storageBucket:'cool-house-e3392.firebasestorage.app',messagingSenderId:'552789838829',appId:'1:552789838829:web:267b70a609e88a8e52b5e4',measurementId:'G-YWCQHE1MXQ'};
+let S=load();let currentInvoice=null,partyView='All',fbConfig=PROJECT_FIREBASE_CONFIG,remoteApplying=false,loginInProgress=false;
+function load(){try{let x=JSON.parse(localStorage.getItem(KEY));return x&&Array.isArray(x.products)?{...blank(),...x}:blank()}catch{return blank()}}
+function persist(){S.updatedAt=new Date().toISOString();localStorage.setItem(KEY,JSON.stringify(S));renderAll();if(cloudReady&&!remoteApplying){localVersion++;localDirty=true;$('syncStatus').textContent='SYNC PENDING';clearTimeout(syncTimer);syncTimer=setTimeout(()=>cloudSyncNow(),450)}}
+const $=id=>document.getElementById(id),num=v=>Math.max(0,Number(v)||0),money=n=>'Rs '+num(n).toLocaleString('en-PK',{maximumFractionDigits:2}),today=()=>new Date().toISOString().slice(0,10),uid=()=>Date.now().toString(36)+Math.random().toString(36).slice(2,7),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+$('today').textContent=new Date().toLocaleDateString('ur-PK',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
+['purchaseDate','saleDate','expenseDate','ledgerDate','transferDate'].forEach(id=>$(id).value=today());
+$('salaryMonth').value=today().slice(0,7);
+function openModal(id){$(id).classList.add('show')}function closeModal(id){$(id).classList.remove('show')}window.openModal=openModal;window.closeModal=closeModal;
+function go(id){document.querySelectorAll('.page').forEach(p=>p.classList.toggle('active',p.id===id));document.querySelectorAll('#nav button').forEach(b=>b.classList.toggle('active',b.dataset.page===id));$('crumb').textContent=document.querySelector(`#nav button[data-page="${id}"]`)?.textContent.trim()||id;window.scrollTo(0,0);renderAll()}window.go=go;
+document.querySelectorAll('#nav button').forEach(b=>b.addEventListener('click',()=>go(b.dataset.page)));
+function balance(aid){let a=S.accounts.find(x=>x.id===aid);if(!a)return 0;let b=num(a.opening);for(const x of S.sales)b+=x.accountId===aid?num(x.paid):0;for(const x of S.purchases)b-=x.accountId===aid?num(x.paid):0;for(const x of S.expenses)b-=x.accountId===aid?num(x.amount):0;for(const x of S.salaries)b-=x.accountId===aid?num(x.paid):0;for(const x of S.ledger){if(x.accountId!==aid)continue;if(x.type==='receive')b+=num(x.amount);if(x.type==='pay')b-=num(x.amount)}for(const t of S.transfers){if(t.from===aid)b-=num(t.amount);if(t.to===aid)b+=num(t.amount)}return b}
+function customerDue(id){let b=0;for(const x of S.sales)if(x.partyId===id)b+=num(x.total)-num(x.paid);for(const x of S.ledger)if(x.partyId===id){if(x.type==='customerCredit')b+=num(x.amount);if(x.type==='receive')b-=num(x.amount)}return b}
+function supplierDue(id){let b=0;for(const x of S.purchases)if(x.partyId===id)b+=num(x.total)-num(x.paid);for(const x of S.ledger)if(x.partyId===id){if(x.type==='supplierCredit')b+=num(x.amount);if(x.type==='pay')b-=num(x.amount)}return b}
+function cogs(){return S.sales.reduce((s,x)=>s+num(x.costTotal),0)}
+function salesTotal(){return S.sales.reduce((s,x)=>s+num(x.total),0)}
+function expenseTotal(){return S.expenses.reduce((s,x)=>s+num(x.amount),0)}
+function salaryTotal(){return S.salaries.reduce((s,x)=>s+num(x.total),0)}
+function stockValue(){return S.products.reduce((s,p)=>s+num(p.qty)*num(p.cost),0)}
+function stockQty(){return S.products.reduce((s,p)=>s+num(p.qty),0)}
+function totalDue(type){return S.parties.filter(p=>p.type===type).reduce((s,p)=>s+(type==='Customer'?customerDue(p.id):supplierDue(p.id)),0)}
+function cashTotal(){return S.accounts.reduce((s,a)=>s+balance(a.id),0)}
+function renderDashboard(){
+ const td=S.sales.filter(x=>x.date===today());$('dSales').textContent=money(td.reduce((s,x)=>s+x.total,0));$('dReceived').textContent=money(td.reduce((s,x)=>s+x.paid,0));$('dExpenses').textContent=money(S.expenses.filter(x=>x.date===today()).reduce((s,x)=>s+x.amount,0));$('dStockValue').textContent=money(stockValue());$('dStockQty').textContent=stockQty().toLocaleString();$('dLow').textContent=S.products.filter(p=>num(p.qty)<=num(p.min)).length;$('dAllSales').textContent=money(salesTotal());$('dReceivable').textContent=money(totalDue('Customer'));$('dPayable').textContent=money(totalDue('Supplier'));$('dCash').textContent=money(cashTotal());let gross=salesTotal()-cogs(),net=gross-expenseTotal()-salaryTotal();$('dProfit').textContent=money(gross);$('dNet').textContent=money(net);$('dNet').className=net<0?'loss':'profit';
+ $('dashInvoices').innerHTML=S.sales.slice(-6).reverse().map(x=>`<tr><td>${esc(x.number)}</td><td>${esc(partyName(x.partyId)||'Walk-in')}</td><td>${money(x.total)}</td><td>${money(x.total-x.paid)}</td></tr>`).join('')||'<tr><td colspan="4" class="empty">ابھی کوئی سیل موجود نہیں</td></tr>';
+ $('dashStock').innerHTML=S.products.slice(0,8).map(p=>`<tr><td>${esc(p.name)}</td><td>${esc(categoryName(p.categoryId)||'—')}</td><td>${p.qty}</td><td>${p.min}</td><td><span class="pill ${p.qty<=0?'red':p.qty<=p.min?'warn':''}">${p.qty<=0?'ختم':p.qty<=p.min?'کم':'موجود'}</span></td></tr>`).join('')||'<tr><td colspan="5" class="empty">ابھی کوئی اسٹاک درج نہیں</td></tr>';
+}
+function categoryName(id){return S.categories.find(x=>x.id===id)?.name||''}function partyName(id){return S.parties.find(x=>x.id===id)?.name||''}
+function renderCategories(){$('categoryCount').textContent=S.categories.length+' کیٹیگریز';$('categoryRows').innerHTML=S.categories.map(c=>`<tr><td><b>${esc(c.name)}</b></td><td>${esc(c.desc||'—')}</td><td>${S.products.filter(p=>p.categoryId===c.id).length}</td><td><button class="btn danger" onclick="deleteCategory('${c.id}')">حذف</button></td></tr>`).join('')||'<tr><td colspan="4" class="empty">ابھی کوئی کیٹیگری نہیں۔ اپنی پہلی کیٹیگری بنائیں۔</td></tr>'}
+window.saveCategory=()=>{let name=$('catName').value.trim();if(!name)return alert('کیٹیگری کا نام لکھیں');if(S.categories.some(c=>c.name.toLowerCase()===name.toLowerCase()))return alert('یہ کیٹیگری پہلے سے موجود ہے');S.categories.push({id:uid(),name,desc:$('catDesc').value.trim()});$('catName').value='';$('catDesc').value='';closeModal('categoryModal');persist()};
+window.deleteCategory=id=>{if(S.products.some(p=>p.categoryId===id))return alert('اس کیٹیگری میں پروڈکٹس موجود ہیں۔ پہلے پروڈکٹ کی کیٹیگری تبدیل کریں۔');if(confirm('کیٹیگری حذف کریں؟')){S.categories=S.categories.filter(x=>x.id!==id);persist()}};
+function categoryOptions(selected=''){return '<option value="">کیٹیگری منتخب کریں</option>'+S.categories.map(c=>`<option value="${c.id}" ${c.id===selected?'selected':''}>${esc(c.name)}</option>`).join('')}
+function renderProducts(){$('pCategory').innerHTML=categoryOptions();let q=($('productSearch').value||'').toLowerCase(),list=S.products.filter(p=>[p.name,p.sku,categoryName(p.categoryId)].join(' ').toLowerCase().includes(q));$('productCount').textContent=list.length+' پروڈکٹس';$('productRows').innerHTML=list.map(p=>`<tr><td><b>${esc(p.name)}</b><div class="muted">${esc(p.brand||'')}</div></td><td>${esc(p.sku||'—')}</td><td>${esc(categoryName(p.categoryId)||'—')}</td><td>${money(p.cost)}</td><td>${money(p.price)}</td><td>${p.qty}</td><td>${money(p.qty*p.cost)}</td><td><button class="btn danger" onclick="deleteProduct('${p.id}')">حذف</button></td></tr>`).join('')||'<tr><td colspan="8" class="empty">کوئی پروڈکٹ نہیں۔ پہلے کیٹیگری بنائیں، پھر پروڈکٹ شامل کریں۔</td></tr>'}
+window.saveProduct=()=>{let name=$('pName').value.trim();if(!name)return alert('پروڈکٹ کا نام ضروری ہے');let qty=num($('pQty').value),p={id:uid(),name,sku:$('pSku').value.trim(),categoryId:$('pCategory').value,brand:$('pBrand').value.trim(),cost:num($('pCost').value),price:num($('pPrice').value),qty,min:num($('pMin').value)};S.products.push(p);$('pName').value='';$('pSku').value='';$('pBrand').value='';$('pCost').value='0';$('pPrice').value='0';$('pQty').value='0';closeModal('productModal');persist()};
+window.deleteProduct=id=>{if(S.sales.some(s=>s.items.some(i=>i.productId===id))||S.purchases.some(p=>p.productId===id))return alert('اس پروڈکٹ کی خریداری یا سیلز ہسٹری موجود ہے؛ حذف کرنے کے بجائے اسٹاک صفر رکھیں۔');if(confirm('پروڈکٹ حذف کریں؟')){S.products=S.products.filter(x=>x.id!==id);persist()}};
+function fillSelect(id,items,placeholder){let s=$(id);if(!s)return;let old=s.value;s.innerHTML=`<option value="">${placeholder}</option>`+items.map(x=>`<option value="${x.id}">${esc(x.name)}</option>`).join('');if(items.some(x=>x.id===old))s.value=old}
+function renderSelects(){fillSelect('purchaseSupplier',S.parties.filter(p=>p.type==='Supplier'),'سپلائر منتخب کریں');fillSelect('saleCustomer',S.parties.filter(p=>p.type==='Customer'),'Walk-in / کسٹمر منتخب کریں');fillSelect('purchaseProduct',S.products,'پروڈکٹ منتخب کریں');fillSelect('saleProduct',S.products.filter(p=>p.qty>0),'اسٹاک میں موجود پروڈکٹ');fillSelect('ledgerParty',S.parties,'پارٹی منتخب کریں');document.querySelectorAll('.accountSelect').forEach(s=>{let old=s.value;s.innerHTML=S.accounts.map(a=>`<option value="${a.id}">${esc(a.name)}</option>`).join('');if(S.accounts.some(a=>a.id===old))s.value=old});$('purchaseCost').value=$('purchaseProduct').value?S.products.find(p=>p.id===$('purchaseProduct').value)?.cost||0:0;$('salePrice').value=$('saleProduct').value?S.products.find(p=>p.id===$('saleProduct').value)?.price||0:0}
+$('purchaseProduct').addEventListener('change',()=>{$('purchaseCost').value=S.products.find(p=>p.id===$('purchaseProduct').value)?.cost||0});
+$('saleProduct').addEventListener('change',()=>{$('salePrice').value=S.products.find(p=>p.id===$('saleProduct').value)?.price||0});
+window.savePurchase=()=>{let p=S.products.find(x=>x.id===$('purchaseProduct').value),supplier=S.parties.find(x=>x.id===$('purchaseSupplier').value),qty=num($('purchaseQty').value),cost=num($('purchaseCost').value),paid=num($('purchasePaid').value),total=qty*cost;if(!p||!supplier||qty<=0||paid>total)return alert('سپلائر، پروڈکٹ، مقدار اور درست ادائیگی درج کریں');p.qty+=qty;p.cost=cost;S.purchases.push({id:uid(),date:$('purchaseDate').value||today(),partyId:supplier.id,productId:p.id,qty,cost,total,paid,accountId:$('purchaseAccount').value,note:$('purchaseNote').value});persist();$('purchaseQty').value=1;$('purchasePaid').value=0;$('purchaseNote').value='';alert('خریداری محفوظ ہوگئی اور اسٹاک بڑھ گیا')};
+function renderPurchases(){$('purchaseRows').innerHTML=S.purchases.slice().reverse().map(x=>`<tr><td>${x.date}</td><td>${esc(partyName(x.partyId))}</td><td>${esc(S.products.find(p=>p.id===x.productId)?.name||'حذف شدہ پروڈکٹ')}</td><td>${x.qty}</td><td>${money(x.total)}</td><td>${money(x.paid)}</td><td>${money(x.total-x.paid)}</td></tr>`).join('')||'<tr><td colspan="7" class="empty">ابھی کوئی خریداری نہیں</td></tr>'}
+window.saveSale=()=>{let p=S.products.find(x=>x.id===$('saleProduct').value),qty=num($('saleQty').value),price=num($('salePrice').value),discount=num($('saleDiscount').value),paid=num($('salePaid').value),customer=S.parties.find(x=>x.id===$('saleCustomer').value),total=Math.max(0,qty*price-discount);if(!p||qty<=0||qty>p.qty||paid>total)return alert('درست پروڈکٹ، مقدار، اسٹاک اور وصول شدہ رقم درج کریں');let status=$('saleStatus').value;if(status==='Pending'&&confirm('یہ آرڈر زیرِ التوا ہے۔ کیا ابھی اسٹاک کم نہ کیا جائے؟')){}else if(status==='Pending')return;let item={productId:p.id,name:p.name,qty,price,cost:p.cost};p.qty-=qty;let sale={id:uid(),number:'CH-'+String(S.sales.length+1).padStart(5,'0'),date:$('saleDate').value||today(),createdAt:new Date().toISOString(),partyId:customer?.id||'',items:[item],qty,price,discount,total,paid,costTotal:qty*num(item.cost),accountId:$('saleAccount').value,status,note:$('saleNote').value};S.sales.push(sale);currentInvoice=sale.id;persist();$('saleQty').value=1;$('saleDiscount').value=0;$('salePaid').value=0;$('saleNote').value='';showInvoice(sale.id);go('invoices');alert('سیل محفوظ ہوگئی اور انوائس تیار ہے')};
+function renderSales(){$('saleRows').innerHTML=S.sales.slice().reverse().map(x=>`<tr><td>${x.number}</td><td>${x.date}</td><td>${esc(partyName(x.partyId)||'Walk-in')}</td><td><span class="pill ${x.status==='Pending'?'warn':''}">${x.status==='Pending'?'زیرِ التوا':'مکمل'}</span></td><td>${money(x.total)}</td><td>${money(x.paid)}</td><td>${money(x.total-x.paid)}</td><td><button class="btn light" onclick="go('invoices');showInvoice('${x.id}')">انوائس</button></td></tr>`).join('')||'<tr><td colspan="8" class="empty">ابھی کوئی آرڈر نہیں</td></tr>'}
+function renderInvoices(){$('invoiceRows').innerHTML=S.sales.slice().reverse().map(x=>`<tr><td>${x.number}</td><td>${x.date}</td><td>${esc(partyName(x.partyId)||'Walk-in')}</td><td>${money(x.total)}</td><td>${money(x.paid)}</td><td>${money(x.total-x.paid)}</td><td><button class="btn light" onclick="showInvoice('${x.id}')">دیکھیں</button></td></tr>`).join('')||'<tr><td colspan="7" class="empty">ابھی کوئی انوائس نہیں</td></tr>'}
+function showInvoice(id){let x=S.sales.find(s=>s.id===id);if(!x)return;currentInvoice=id;$('invoicePreview').innerHTML=`<div class="invoice"><div class="invhead"><div><h2>${esc(S.company.name||'COOL HOUSE')}</h2><div class="muted">${esc(S.company.address||'')}</div><div class="muted">${esc(S.company.phone||'')} · ${esc(S.company.email||'')}</div></div><div><b>SALES INVOICE</b><div>${x.number}</div><div class="muted">تاریخ: ${x.date}</div><div class="muted">وقت: ${new Date(x.createdAt||x.date).toLocaleTimeString('en-PK',{hour:'2-digit',minute:'2-digit'})} · ${new Date(x.createdAt||x.date).toLocaleDateString('en-PK',{month:'long',year:'numeric'})}</div></div></div><p><b>کسٹمر:</b> ${esc(partyName(x.partyId)||'Walk-in Customer')}</p><table><thead><tr><th>پروڈکٹ</th><th>مقدار</th><th>فی یونٹ</th><th>کل</th></tr></thead><tbody>${x.items.map(i=>`<tr><td>${esc(i.name)}</td><td>${i.qty}</td><td>${money(i.price)}</td><td>${money(i.qty*i.price)}</td></tr>`).join('')}</tbody></table><div class="totals"><div><span>سب ٹوٹل</span><b>${money(x.qty*x.price)}</b></div><div><span>ڈسکاؤنٹ</span><b>${money(x.discount)}</b></div><div><b>کل رقم</b><b>${money(x.total)}</b></div><div><span>وصول شدہ</span><b>${money(x.paid)}</b></div><div><span>بقایا</span><b>${money(x.total-x.paid)}</b></div></div><div class="footer">Thank you for your business · COOL HOUSE</div><div class="no-print right" style="margin-top:20px"><button class="btn primary" onclick="window.print()">انوائس پرنٹ کریں / PDF</button></div></div>`}
+window.showInvoice=showInvoice;
+window.saveParty=()=>{let name=$('partyName').value.trim();if(!name)return alert('نام درج کریں');let type=$('partyType').value;let opening=num($('partyOpening').value);let p={id:uid(),name,type,phone:$('partyPhone').value.trim(),opening};S.parties.push(p);if(opening)S.ledger.push({id:uid(),partyId:p.id,type:type==='Customer'?'customerCredit':'supplierCredit',amount:opening,date:today(),note:'ابتدائی بقایا'});$('partyName').value='';$('partyPhone').value='';$('partyOpening').value=0;closeModal('partyModal');persist()};
+window.partyFilter=(v,el)=>{partyView=v;document.querySelectorAll('.tabs .tab').forEach(x=>x.classList.remove('active'));el.classList.add('active');renderParties()};
+function renderParties(){$('partyRows').innerHTML=S.parties.filter(p=>partyView==='All'||p.type===partyView).map(p=>`<tr><td><b>${esc(p.name)}</b></td><td>${p.type==='Customer'?'کسٹمر':'سپلائر'}</td><td>${esc(p.phone||'—')}</td><td>${money(p.type==='Customer'?customerDue(p.id):supplierDue(p.id))}</td><td><button class="btn light" onclick="partyLedger('${p.id}')">کھاتہ</button></td></tr>`).join('')||'<tr><td colspan="5" class="empty">ابھی کوئی پارٹی درج نہیں</td></tr>'}
+window.partyLedger=id=>{go('accounts');$('ledgerSearch').value=partyName(id);renderLedger()};
+window.saveLedger=()=>{let party=S.parties.find(p=>p.id===$('ledgerParty').value),amount=num($('ledgerAmount').value),type=$('ledgerType').value;if(!party||amount<=0)return alert('پارٹی اور درست رقم منتخب کریں');if(type==='receive'&&party.type!=='Customer')return alert('وصولی کسٹمر کے لیے ہے');if(type==='pay'&&party.type!=='Supplier')return alert('ادائیگی سپلائر کے لیے ہے');if(type==='customerCredit'&&party.type!=='Customer')return alert('کسٹمر بقایا کے لیے کسٹمر منتخب کریں');if(type==='supplierCredit'&&party.type!=='Supplier')return alert('سپلائر بقایا کے لیے سپلائر منتخب کریں');S.ledger.push({id:uid(),partyId:party.id,type,amount,accountId:$('ledgerAccount').value,date:$('ledgerDate').value||today(),note:$('ledgerNote').value});persist();$('ledgerAmount').value='';$('ledgerNote').value='';alert('کھاتہ انٹری محفوظ ہوگئی')};
+function renderLedger(){let q=($('ledgerSearch').value||'').toLowerCase();$('ledgerRows').innerHTML=S.ledger.slice().reverse().filter(x=>(partyName(x.partyId)+' '+x.note).toLowerCase().includes(q)).map(x=>`<tr><td>${x.date}</td><td>${esc(partyName(x.partyId))}</td><td>${esc(x.note||x.type)}</td><td>${money(x.amount)}</td><td>${({receive:'وصولی',pay:'ادائیگی',customerCredit:'کسٹمر بقایا',supplierCredit:'سپلائر بقایا'})[x.type]||x.type}</td></tr>`).join('')||'<tr><td colspan="5" class="empty">کوئی لین دین موجود نہیں</td></tr>'}
+window.saveExpense=()=>{let amount=num($('expenseAmount').value);if(amount<=0)return alert('رقم درج کریں');S.expenses.push({id:uid(),category:$('expenseCategory').value,date:$('expenseDate').value||today(),amount,accountId:$('expenseAccount').value,note:$('expenseNote').value});persist();$('expenseAmount').value='';$('expenseNote').value='';alert('خرچہ محفوظ ہوگیا')};
+function renderExpenses(){$('expenseTotal').textContent='کل: '+money(expenseTotal());$('expenseRows').innerHTML=S.expenses.slice().reverse().map(x=>`<tr><td>${x.date}</td><td>${esc(x.category)}</td><td>${esc(x.note||'—')}</td><td>${esc(S.accounts.find(a=>a.id===x.accountId)?.name||'')}</td><td>${money(x.amount)}</td></tr>`).join('')||'<tr><td colspan="5" class="empty">ابھی کوئی خرچہ نہیں</td></tr>'}
+window.saveSalary=()=>{let employee=$('salaryEmployee').value.trim(),total=num($('salaryTotal').value),paid=num($('salaryPaid').value);if(!employee||total<=0||paid>total)return alert('ملازم، تنخواہ اور درست ادا شدہ رقم درج کریں');S.salaries.push({id:uid(),employee,month:$('salaryMonth').value||today().slice(0,7),total,paid,accountId:$('salaryAccount').value,note:$('salaryNote').value});persist();$('salaryEmployee').value='';$('salaryTotal').value='';$('salaryPaid').value=0;$('salaryNote').value='';alert('تنخواہ ریکارڈ ہوگئی')};
+function renderSalaries(){$('salaryRows').innerHTML=S.salaries.slice().reverse().map(x=>`<tr><td>${esc(x.employee)}</td><td>${x.month}</td><td>${money(x.total)}</td><td>${money(x.paid)}</td><td>${money(x.total-x.paid)}</td></tr>`).join('')||'<tr><td colspan="5" class="empty">ابھی تنخواہ کا ریکارڈ نہیں</td></tr>'}
+window.addBank=()=>{let name=$('bankName').value.trim();if(!name)return alert('اکاؤنٹ کا نام درج کریں');S.accounts.push({id:uid(),name,opening:num($('bankOpening').value)});$('bankName').value='';$('bankOpening').value=0;persist()};
+function renderBank(){$('bankRows').innerHTML=S.accounts.map(a=>`<tr><td>${esc(a.name)}</td><td>${money(a.opening)}</td><td><b>${money(balance(a.id))}</b></td><td>${a.id==='cash'?'بنیادی اکاؤنٹ':'<span class="muted">فعال</span>'}</td></tr>`).join('');}
+window.transferMoney=()=>{let from=$('transferFrom').value,to=$('transferTo').value,amount=num($('transferAmount').value);if(!from||!to||from===to||amount<=0||balance(from)<amount)return alert('دو مختلف اکاؤنٹس اور کافی بیلنس منتخب کریں');S.transfers.push({id:uid(),from,to,amount,date:$('transferDate').value||today()});persist();$('transferAmount').value='';alert('رقم منتقل ہوگئی')};
+function renderReports(){let gross=salesTotal()-cogs(),costs=expenseTotal()+salaryTotal(),net=gross-costs;$('rSales').textContent=money(salesTotal());$('rCogs').textContent=money(cogs());$('rGross').textContent=money(gross);$('rCosts').textContent=money(costs);$('rNet').textContent=money(net);$('rPurchases').textContent=money(S.purchases.reduce((s,x)=>s+x.total,0));$('rStock').textContent=money(stockValue());$('rCash').textContent=money(cashTotal());let groups={};S.expenses.forEach(x=>groups[x.category]=(groups[x.category]||0)+x.amount);$('expenseSummary').innerHTML=Object.entries(groups).map(([k,v])=>`<tr><td>${esc(k)}</td><td>${money(v)}</td></tr>`).join('')||'<tr><td colspan="2" class="empty">ابھی کوئی اخراجات نہیں</td></tr>';$('stockReport').innerHTML=S.products.map(p=>`<tr><td>${esc(p.name)}</td><td>${p.qty}</td><td>${money(p.cost)}</td><td>${money(p.qty*p.cost)}</td><td>${S.sales.reduce((s,x)=>s+x.items.filter(i=>i.productId===p.id).reduce((a,i)=>a+i.qty,0),0)}</td></tr>`).join('')||'<tr><td colspan="5" class="empty">کوئی اسٹاک نہیں</td></tr>'}
+function renderAll(){renderDashboard();renderCategories();renderProducts();renderSelects();renderPurchases();renderSales();renderInvoices();renderParties();renderLedger();renderExpenses();renderSalaries();renderBank();renderReports();$('companyName').value=S.company.name||'COOL HOUSE';$('companyPhone').value=S.company.phone||'';$('companyEmail').value=S.company.email||'';$('companyAddress').value=S.company.address||''}
+window.saveCompany=()=>{S.company={name:$('companyName').value.trim()||'COOL HOUSE',phone:$('companyPhone').value.trim(),email:$('companyEmail').value.trim(),address:$('companyAddress').value.trim()};persist();alert('کمپنی کی معلومات محفوظ ہوگئیں')};
+window.backup=()=>{let blob=new Blob([JSON.stringify(S,null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='cool-house-backup-'+today()+'.json';a.click();URL.revokeObjectURL(a.href);$('backupInfo').textContent='بیک اپ تیار ہوگیا: '+new Date().toLocaleString()};
+window.restoreBackup=e=>{let f=e.target.files[0];if(!f)return;let r=new FileReader();r.onload=()=>{try{let x=JSON.parse(r.result);if(!Array.isArray(x.products)||!Array.isArray(x.categories))throw Error();S={...blank(),...x};persist();alert('بیک اپ بحال ہوگیا')}catch{alert('یہ درست COOL HOUSE بیک اپ فائل نہیں ہے')}e.target.value=''};r.readAsText(f)};
+window.clearAllData=()=>{if(!confirm('کیا واقعی تمام نیا COOL HOUSE ڈیٹا صاف کرنا ہے؟ پہلے بیک اپ ضرور بنائیں۔'))return;S=blank();persist();alert('نیا ڈیٹا صاف ہوگیا')};
+function saveFirebaseConfig(){fbConfig={apiKey:$('fbApiKey').value.trim(),authDomain:$('fbAuthDomain').value.trim(),projectId:$('fbProjectId').value.trim(),appId:$('fbAppId').value.trim(),storageBucket:$('fbBucket').value.trim(),messagingSenderId:$('fbSender').value.trim()};if(!fbConfig.apiKey||!fbConfig.projectId||!fbConfig.appId)return alert('API Key، Project ID اور App ID ضروری ہیں');localStorage.setItem('ch_fb_config_v2',JSON.stringify(fbConfig));$('firebaseMessage').textContent='Firebase کنفیگریشن اس ڈیوائس پر محفوظ ہوگئی۔ اب Connect دبائیں۔'}
+window.saveFirebaseConfig=saveFirebaseConfig;
+async function finishFirebaseLogin(user){
+ cloudUid=user.uid;cloudReady=true;localDirty=false;
+ const ref=doc(db,'users',cloudUid,'coolHouseERP','main');
+ try{
+  const snap=await getDoc(ref);
+  if(snap.exists()){
+   const data=snap.data(),remote=data.state;
+   if(remote&&data.clientId!==CLIENT_ID){
+    const chooseCloud=confirm('Firebase پر پہلے سے ڈیٹا موجود ہے۔ OK دبائیں تو کلاؤڈ والا ڈیٹا اس ڈیوائس پر آئے گا۔ Cancel دبائیں تو اس ڈیوائس کا موجودہ ڈیٹا کلاؤڈ پر اپ لوڈ ہوگا۔');
+    if(chooseCloud){remoteApplying=true;S={...blank(),...remote};localStorage.setItem(KEY,JSON.stringify(S));renderAll();remoteApplying=false}
+    else {localDirty=true;await cloudSyncNow()}
+   }
+  }else{localDirty=true;await cloudSyncNow()}
+ }catch(e){cloudReady=false;$('syncStatus').textContent='LOCAL محفوظ';$('firebaseMessage').textContent='Firebase ڈیٹا پڑھنے میں مسئلہ: '+e.message;return}
+ if(unsubscribe)unsubscribe();
+ unsubscribe=onSnapshot(ref,{includeMetadataChanges:true},snap=>{
+  if(!snap.exists()||remoteApplying||snap.metadata.hasPendingWrites)return;
+  const data=snap.data(),remote=data.state;
+  if(!remote||data.clientId===CLIENT_ID||localDirty)return;
+  if(remote.updatedAt!==S.updatedAt){remoteApplying=true;S={...blank(),...remote};localStorage.setItem(KEY,JSON.stringify(S));renderAll();remoteApplying=false;$('firebaseMessage').textContent='دوسرے ڈیوائس سے تازہ ڈیٹا موصول ہوگیا۔'}
+ },err=>{$('firebaseMessage').textContent='Cloud listener error: '+err.message;$('syncStatus').textContent='SYNC ERROR'});
+ $('syncStatus').textContent='FIREBASE CONNECTED';$('firebaseMessage').textContent='Firebase منسلک ہے۔ آف لائن تبدیلیاں ڈیوائس پر محفوظ ہوں گی اور انٹرنیٹ واپس آنے پر سنک ہوں گی۔ لاگ اِن: '+(user.email||user.uid);
+}
+async function prepareFirebase(){fbConfig=PROJECT_FIREBASE_CONFIG;try{localStorage.setItem('ch_fb_config_v2',JSON.stringify(PROJECT_FIREBASE_CONFIG));}catch(e){}const app=getApps().find(a=>a.options.projectId===PROJECT_FIREBASE_CONFIG.projectId)||initializeApp(PROJECT_FIREBASE_CONFIG);auth=getAuth(app);try{db=initializeFirestore(app,{localCache:persistentLocalCache({tabManager:persistentMultipleTabManager()})})}catch(e){db=getFirestore(app)}if(!authObserverReady){authObserverReady=true;onAuthStateChanged(auth,async user=>{if(user){$('loginGate').style.display='none';$('erpApplication').style.display='flex';$('loginError').textContent='';$('syncStatus').textContent='لاگ اِن کامیاب؛ کلاؤڈ ڈیٹا چیک ہو رہا ہے…';try{if(user.uid!==cloudUid)await finishFirebaseLogin(user);if(!cloudReady){$('syncStatus').textContent='LOCAL محفوظ';$('firebaseMessage').textContent='لاگ اِن کامیاب ہے، مگر کلاؤڈ ڈیٹا تک رسائی نہیں ملی۔ ERP کھل گیا ہے؛ Firestore Rules اور انٹرنیٹ چیک کرنا ہوگا۔'}}catch(e){cloudReady=false;$('syncStatus').textContent='LOCAL محفوظ';$('firebaseMessage').textContent='لاگ اِن کامیاب ہے، مگر کلاؤڈ سنک میں مسئلہ: '+e.message+'۔ آپ کا لوکل ERP کھلا رہے گا۔'}}else if(!loginInProgress&&!auth.currentUser){cloudReady=false;cloudUid=null;$('syncStatus').textContent='LOCAL محفوظ';$('erpApplication').style.display='none';$('loginGate').style.display='grid'}})}}
+async function connectFirebase(){try{$('firebaseMessage').textContent='Google اکاؤنٹ سے رابطہ ہو رہا ہے…';await prepareFirebase();const provider=new GoogleAuthProvider();const cred=await signInWithPopup(auth,provider);$('firebaseMessage').textContent='لاگ اِن مکمل؛ اکاؤنٹ کا ڈیٹا لوڈ ہو رہا ہے…'}catch(e){cloudReady=false;$('firebaseMessage').textContent='Firebase لاگ اِن ناکام: '+e.message+'۔ اگر unauthorized-domain آئے تو اپنی ویب سائٹ کا domain Firebase Authentication → Settings → Authorized domains میں شامل کریں۔';$('syncStatus').textContent='LOCAL محفوظ'}}
+window.connectFirebase=connectFirebase;
+window.connectFirebaseEmail=async()=>{try{const email=prompt('اپنے Firebase Admin اکاؤنٹ کا Email درج کریں');if(!email)return;const password=prompt('اپنا Firebase Admin Password درج کریں');if(!password)return;$('firebaseMessage').textContent='Admin اکاؤنٹ سے لاگ اِن ہو رہا ہے…';await prepareFirebase();const cred=await signInWithEmailAndPassword(auth,email.trim(),password);$('firebaseMessage').textContent='لاگ اِن مکمل؛ اکاؤنٹ کا ڈیٹا لوڈ ہو رہا ہے…'}catch(e){cloudReady=false;$('firebaseMessage').textContent='Email/Password لاگ اِن ناکام: '+e.message;$('syncStatus').textContent='LOCAL محفوظ'}};
+window.cloudSyncNow=async()=>{
+ if(!cloudReady||!db||!cloudUid)return alert('پہلے Firebase Connect کریں');
+ if(syncInFlight){syncAgain=true;return}
+ syncInFlight=true;syncAgain=false;const versionAtStart=localVersion;const stateToWrite=JSON.parse(JSON.stringify(S));$('syncStatus').textContent='SYNCING…';
+ try{
+  await setDoc(doc(db,'users',cloudUid,'coolHouseERP','main'),{state:stateToWrite,clientId:CLIENT_ID,updatedAt:serverTimestamp()});
+  if(localVersion===versionAtStart){localDirty=false;$('syncStatus').textContent='SYNCED';$('firebaseMessage').textContent='کلاؤڈ سنک مکمل ہوگیا۔ '+new Date().toLocaleTimeString()}else{localDirty=true;syncAgain=true}
+ }catch(e){$('syncStatus').textContent='SYNC ERROR';$('firebaseMessage').textContent='سنک کی خرابی: '+e.message+'۔ لوکل ڈیٹا محفوظ ہے؛ انٹرنیٹ واپس آنے پر دوبارہ کوشش کریں۔'}
+ finally{syncInFlight=false;if(syncAgain&&cloudReady){syncAgain=false;clearTimeout(syncTimer);syncTimer=setTimeout(()=>cloudSyncNow(),150)}}
+};
+window.addEventListener('online',()=>{if(cloudReady){$('syncStatus').textContent='RECONNECTING…';cloudSyncNow()}});
+if(fbConfig){$('fbApiKey').value=fbConfig.apiKey||'';$('fbAuthDomain').value=fbConfig.authDomain||'';$('fbProjectId').value=fbConfig.projectId||'';$('fbAppId').value=fbConfig.appId||'';$('fbBucket').value=fbConfig.storageBucket||'';$('fbSender').value=fbConfig.messagingSenderId||'';localStorage.setItem('ch_fb_config_v2',JSON.stringify(fbConfig));$('firebaseMessage').textContent='آپ کے Cool House Firebase پروجیکٹ کی کنفیگریشن تیار ہے۔ Google یا Admin Email سے لاگ اِن کریں۔'}
+
+$('coolHouseLoginForm').addEventListener('submit',async e=>{
+ e.preventDefault();
+ const email=$('loginEmail').value.trim(),password=$('loginPassword').value,btn=$('loginSubmit');
+ if(!email||!password){$('loginError').textContent='براہِ کرم Email اور Password درج کریں۔';return}
+ loginInProgress=true;btn.disabled=true;btn.textContent='SIGNING IN…';$('loginError').textContent='Firebase سے رابطہ ہو رہا ہے…';
+ try{
+  await prepareFirebase();
+  if(!auth)throw new Error('Firebase Authentication شروع نہیں ہو سکی۔');
+  const credential=await signInWithEmailAndPassword(auth,email,password);
+  const user=credential.user;
+  $('loginGate').style.display='none';$('erpApplication').style.display='flex';$('loginError').textContent='';$('syncStatus').textContent='لاگ اِن کامیاب؛ کلاؤڈ ڈیٹا چیک ہو رہا ہے…';
+  if(user.uid!==cloudUid){cloudUid=user.uid;finishFirebaseLogin(user).catch(err=>{$('syncStatus').textContent='LOCAL محفوظ';$('firebaseMessage').textContent='لاگ اِن کامیاب ہے، مگر کلاؤڈ سنک میں مسئلہ: '+(err.message||err)+'۔ ERP کھلا رہے گا۔'})}
+ }catch(err){
+  const code=err.code||'';
+  const messages={'auth/invalid-credential':'Email یا Password درست نہیں۔','auth/user-not-found':'اس Email کا اکاؤنٹ Firebase میں موجود نہیں۔','auth/wrong-password':'Password درست نہیں۔','auth/too-many-requests':'بہت زیادہ کوششیں ہوئیں؛ کچھ دیر بعد دوبارہ کوشش کریں۔','auth/operation-not-allowed':'Firebase میں Email/Password لاگ اِن فعال نہیں۔','auth/unauthorized-domain':'یہ ویب سائٹ Firebase Authorized Domains میں شامل نہیں۔','auth/network-request-failed':'انٹرنیٹ کنکشن چیک کریں۔','auth/invalid-email':'Email کا فارمیٹ درست نہیں۔','auth/invalid-api-key':'Firebase API Key درست نہیں۔','auth/api-key-not-valid.-please-pass-a-valid-api-key.':'Firebase API Key درست نہیں۔'};
+  $('loginError').textContent=(messages[code]||('لاگ اِن ناکام ['+(code||'ERROR')+']: '+(err.message||'نامعلوم خرابی')));
+ }finally{loginInProgress=false;btn.disabled=false;btn.textContent='LOGIN'}
+});
+$('toggleLoginPassword').addEventListener('click',()=>{const p=$('loginPassword');p.type=p.type==='password'?'text':'password';$('toggleLoginPassword').textContent=p.type==='password'?'◉':'◎'});
+prepareFirebase().catch(e=>{$('firebaseMessage').textContent='Firebase خودکار رابطہ دستیاب نہیں: '+e.message+'۔ لوکل ڈیٹا محفوظ ہے۔'});
+renderAll();
+</script>
+</body></html>
